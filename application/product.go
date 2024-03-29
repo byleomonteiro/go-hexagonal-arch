@@ -15,7 +15,7 @@ type ProductInterface interface {
 	IsValid() (bool, error)
 	Enable() error
 	Disable() error
-	GetId() string
+	GetID() string
 	GetName() string
 	GetStatus() string
 	GetPrice() float64
@@ -51,11 +51,6 @@ type Product struct {
 	Name   string  `valid:"required"`
 	Price  float64 `valid:"float,optional"`
 	Status string  `valid:"required"`
-}
-
-// GetId implements ProductInterface.
-func (p *Product) GetId() string {
-	panic("unimplemented")
 }
 
 func NewProduct() *Product {
