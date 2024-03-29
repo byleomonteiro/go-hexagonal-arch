@@ -53,7 +53,12 @@ type Product struct {
 	Status string  `valid:"required"`
 }
 
-func newProduct() *Product {
+// GetId implements ProductInterface.
+func (p *Product) GetId() string {
+	panic("unimplemented")
+}
+
+func NewProduct() *Product {
 	product := Product{
 		ID:     uuid.NewV4().String(),
 		Status: DISABLED,
